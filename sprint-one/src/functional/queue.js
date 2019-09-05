@@ -16,7 +16,7 @@ var Queue = function() {
       length += 1;
     }
     return length;
-  }
+  };
 
   // Implement the methods below
   someInstance.enqueue = function(value) {

@@ -12,7 +12,7 @@ var Stack = function() {
       length += 1;
     }
     return length;
-  }
+  };
 
   // Implement the methods below
   someInstance.push = function(value) {
