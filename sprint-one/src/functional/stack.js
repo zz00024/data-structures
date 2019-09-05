@@ -9,11 +9,10 @@ var Stack = function() {
     //add new value into someInstance object by using storage.
     //edge case if storage has nothing in it
     var theSize = Object.keys(storage);
-    if(theSize.length===0){
+    if (theSize.length === 0) {
       storage[0] = value;
       // console.log(storage[0]);
-    }
-    else{
+    } else {
       storage[theSize.length] = value;
       // console.log(storage[theSize.length-1]);
     }
@@ -26,11 +25,11 @@ var Stack = function() {
     //set a variable to represent the key/value that got deleted
     var theRemoved;
     //if the storage is empty when called pop, return 0
-    if(theSize.length===0){
+    if (theSize.length === 0) {
       return 0;
     }
-    theRemoved = storage[theSize.length-1];
-    delete storage[theSize.length-1];
+    theRemoved = storage[theSize.length - 1];
+    delete storage[theSize.length - 1];
     return theRemoved;
   };
 
