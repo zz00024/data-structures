@@ -9,13 +9,22 @@ var Queue = function() {
 
   var first = 0;
 
-  // Implement the methods below
+  //build a helper function to get the number of properties in storage
+  var objLength = function (obj) {
+    var length = 0;
+    for (var key in obj) {
+      length += 1;
+    }
+    return length;
+  }
 
+  // Implement the methods below
   someInstance.enqueue = function(value) {
     //declare a variable for the number of keys in storage
-    var keys = Object.keys(storage);
+    var keys = objLength(storage);
+    //Object.keys(storage);
     //add new value into storage
-    if (keys.length === 0) {
+    if (keys === 0) {
       first = 0;
       storage[index] = value;
     } else {
@@ -26,7 +35,6 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     //declare a variable for the number of keys in storage
-    //var keys = Object.keys(storage);
     var theRemoved = storage[first];
     delete storage[first];
 
@@ -37,8 +45,9 @@ var Queue = function() {
 
   someInstance.size = function() {
     //declare a variable for the number of keys in storage
-    var keys = Object.keys(storage);
-    return keys.length;
+    var keys = objLength(storage);
+    //Object.keys(storage);
+    return keys;
   };
 
   return someInstance;
